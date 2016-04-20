@@ -7,6 +7,7 @@
     "test": "tslint src/**/*.ts && tsc",
     "example:build": "tsc -outDir examples/dist -experimentalDecorators examples/blink.ts typings/main.d.ts",
     "example:run": "node examples/dist/examples/blink",
+    "example:tessel": "t2 run examples/dist/examples/blink.js",
     "typings": "typings install",
     "prepublish": "typings install && npm run build"
   },
@@ -51,5 +52,9 @@
     "angular2": "^2.0.0-beta.12",
     "angular2-universal-preview": "^0.86.1",
     "johnny-five": "^0.9.0"
+  },
+  "dependencies": {
+    "t2-cli": "0.0.18",
+    "tessel": "^0.3.24"
   }
 }
